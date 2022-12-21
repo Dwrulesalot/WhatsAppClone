@@ -1,63 +1,20 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Ionicons } from "@expo/vector-icons";
 
-import ChatListScreen from "../screens/ChatListScreen";
-import ChatSettingScreen from "../screens/ChatSettingsScreen";
-import SettingsScreen from "../screens/SettingsScreen";
+import MainNavigator from "./MainNavigator";
 
-const Stack = createStackNavigator();
-const Tab = createBottomTabNavigator();
 
-const TabNavigator = () => {
-  return (
-    <Tab.Navigator screenOptions={{ headerTitle: "" }}>
-      <Tab.Screen
-        name="ChatList"
-        component={ChatListScreen}
-        options={{
-          tabBarLabel: "Chats",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="chatbubble-outline" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Settings"
-        component={SettingsScreen}
-        options={{
-          tabBarLabel: "Settings",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="settings-outline" size={size} color={color} />
-          ),
-        }}
-      />
-    </Tab.Navigator>
-  );
-};
-
+//to do add in navigators to deal with: 
+// signing in  &  using the app not signed in  &  missing account info 
 const AppNavigator = (props) => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={TabNavigator}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="ChatSettings"
-          component={ChatSettingScreen}
-          options={{
-            headerTitle: "Chat Settings",
-            headerBackTitle: "Go Back", //doesn't seem to work?
-          }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+
+    //const isSignedIn = checkIsSignedIn();
+    //below: { isSignedIn && <MainNavigator />}
+    //       { !isSignedIn && <SignInNavigator />}
+  return <NavigationContainer>
+    
+    <MainNavigator />
+  </NavigationContainer>;
 };
 
 export default AppNavigator;
