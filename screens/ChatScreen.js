@@ -32,7 +32,7 @@ const ChatScreen = (props) => {
   <KeyboardAvoidingView 
   style={styles.keyboardScreen}
   behavior={Platform.OS === "ios" ? "padding" : undefined}
-  keyboardVerticalOffset={100}
+  keyboardVerticalOffset={60}
   > 
     <View style={styles.container}>
       <ImageBackground
