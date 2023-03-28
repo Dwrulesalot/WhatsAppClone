@@ -4,5 +4,6 @@ export default{
     lightGrey: '#bdc3c7',
     grey: '#7f8c8d',
     lightGreen: '#a4e4a0',
-    offWhite: '#F4F8F7'
+    offWhite: '#F4F8F7',
+    textColor: "1c1e21"
 }
