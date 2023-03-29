@@ -36,14 +36,21 @@ const AuthScreen = props => {
         iconPack={Entypo} 
         />
         
-        <SubmitButton />
+        <SubmitButton 
+        title="Sign Up"
+        onPress={() => console.log("Sign UP pressed")}
+        disabled={false}
+        style={styles.submitStyle}
+        />
 
       </PageContainer>
     </SafeAreaView>
 };
 
 const styles = StyleSheet.create({
-    
+    submitStyle: {
+        marginTop: 20
+    },  
 })
 
 export default AuthScreen;
