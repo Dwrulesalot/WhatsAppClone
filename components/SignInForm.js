@@ -5,22 +5,12 @@ import React from "react";
 import Input from "./Input";
 import SubmitButton from "./SubmitButton";
 import { View, Text, StyleSheet } from "react-native";
+import SubmitButton from "../components/SubmitButton";
 
-const SignUpForm = props => {
+const SignInForm = props => {
 return (
     <>
-    <Input 
-        label="First Name" 
-        icon= "user-circle-o" 
-        iconPack={FontAwesome} 
-        />
-
-        <Input 
-        label="Last Name" 
-        icon= "user-circle-o" 
-        iconPack={FontAwesome} 
-        />
-
+    
         <Input 
         label="Email" 
         icon= "mail" 
@@ -34,7 +24,7 @@ return (
         />
         
         <SubmitButton 
-        title="Sign Up"
+        title="Sign In"
         onPress={() => console.log("Sign UP pressed")}
         disabled={false}
         />
@@ -43,4 +33,4 @@ return (
 
 )};
 
-export default SignUpForm;
+export default SignInForm;
