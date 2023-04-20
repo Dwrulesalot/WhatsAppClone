@@ -5,7 +5,6 @@ import React from "react";
 import Input from "./Input";
 import SubmitButton from "./SubmitButton";
 import { View, Text, StyleSheet } from "react-native";
-import SubmitButton from "../components/SubmitButton";
 
 const SignInForm = props => {
 return (
@@ -24,8 +23,8 @@ return (
         />
         
         <SubmitButton 
-        title="Sign In"
-        onPress={() => console.log("Sign UP pressed")}
+        title="Sign in"
+        onPress={() => console.log("Sign IN pressed")}
         disabled={false}
         />
         
