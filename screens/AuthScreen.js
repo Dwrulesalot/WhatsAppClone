@@ -24,7 +24,6 @@ const AuthScreen = props => {
               <Image 
               style={styles.image}
               source={logo} />
-
             </View>
 
 
